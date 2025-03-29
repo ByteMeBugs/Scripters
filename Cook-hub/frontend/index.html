@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Sharing Platform</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <h1 class="logo">🍲 RecipeHub</h1>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#recipes">Recipes</a></li>
+            <li><a href="#add-recipe" onclick="showAddRecipeForm()">Add Recipe</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <h2>Welcome to RecipeHub</h2>
+        <p>Discover and share amazing recipes!</p>
+        <a href="#recipes" class="btn">Explore Recipes</a>
+    </header>
+
+    <!-- Recipe Listing Section -->
+    <section id="recipes" class="recipes-container">
+        <h2>Featured Recipes</h2>
+        <div class="recipe-grid" id="recipe-list">
+            <!-- Recipes will be dynamically added here -->
+             
+        </div>
+    </section>
+
+   <!-- Add Recipe Form -->
+<section id="add-recipe" class="form-container" style="display: none;">
+    <h2>Share Your Recipe</h2>
+    <form id="recipe-form" enctype="multipart/form-data">
+        <!-- Recipe Title -->
+        <input type="text" id="title" placeholder="Recipe Title" required>
+        
+        <!-- Recipe Description -->
+        <textarea id="description" placeholder="Describe your recipe..." rows="4" required></textarea>
+
+        <!-- Upload Recipe Image -->
+        <label for="recipe-image">Upload Recipe Photo</label>
+        <input type="file" id="recipe-image" accept="image/*">
+
+        <!-- Number of Servings -->
+        <input type="number" id="servings" placeholder="Serves (e.g., 2 people)" required>
+
+        <!-- Ingredients Section -->
+        <h3>Ingredients</h3>
+        <div id="ingredients-list">
+            <div class="ingredient-item">
+                <input type="text" name="ingredient" placeholder="Ingredient (e.g., 250g flour)" required>
+            </div>
+        </div>
+        <button type="button" onclick="addIngredient()">+ Add Ingredient</button>
+
+        <!-- Steps Section -->
+        <h3>Steps</h3>
+        <div id="steps-list">
+            <div class="step-item">
+                <textarea name="step" placeholder="Step description" rows="2" required></textarea>
+                <input type="file" name="step-image" accept="image/*">
+            </div>
+        </div>
+        <button type="button" onclick="addStep()">+ Add Step</button>
+
+        <!-- Submit Button -->
+        <button type="submit">Publish</button>
+    </form>
+</section>
+<iframe
+	src="https://sarthak413-foodst.hf.space"
+	frameborder="0"
+	width="850"
+	height="450"
+></iframe>
+<gradio-app src="https://sarthak413-foodst.hf.space"></gradio-app>
+
+
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 RecipeHub. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
